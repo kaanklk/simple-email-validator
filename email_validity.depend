@@ -1,7 +1,25 @@
 # depslib dependency file v1.0
-1605964578 source:e:\projects\c\email_validity\email.c
-
-1606411840 source:e:\projects\c\email_validity\main.c
+1606871152 source:e:\projects\c\email_valid2\email.c
 	<stdio.h>
 	<stdlib.h>
+	"email.h"
+
+1606868444 e:\projects\c\email_valid2\email.h
+
+1606870947 source:e:\projects\c\email_valid2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"email.h"
+
+1606871152 source:e:\projects\c\email_validity\email.c
+	<stdio.h>
+	<stdlib.h>
+	"email.h"
+
+1606868444 e:\projects\c\email_validity\email.h
+
+1606870947 source:e:\projects\c\email_validity\main.c
+	<stdio.h>
+	<stdlib.h>
+	"email.h"
 
