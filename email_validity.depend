@@ -23,3 +23,15 @@
 	<stdlib.h>
 	"email.h"
 
+1606930115 source:/home/kaan/Projects/email_validator/main.c
+	<stdio.h>
+	<stdlib.h>
+	"email.h"
+
+1606930066 /home/kaan/Projects/email_validator/email.h
+
+1606930102 source:/home/kaan/Projects/email_validator/email.c
+	<stdio.h>
+	<stdlib.h>
+	"email.h"
+

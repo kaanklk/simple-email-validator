@@ -5,9 +5,12 @@
 
 int main(int argc, char *argv[])
 {
-    if(argc == 2){
+    if(argc != 2)
+    {
         usage();
-        emailval(argc,argv);
+        return EXIT_FAILURE;
     }
+
+    emailval(argv[1]);
     return 0;
 }

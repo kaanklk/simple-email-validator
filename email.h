@@ -1,7 +1,7 @@
 #ifndef EMAIL_H_INCLUDED
 #define EMAIL_H_INCLUDED
 
-int emailval(int argc, char *argv[]);
+int emailval(char *input);
 void usage();
 
 #endif // EMAIL_H_INCLUDED

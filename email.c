@@ -3,39 +3,54 @@
 
 #include "email.h"
 
-int emailval(int argc, char *argv[]){
+int emailval(char *input){
 
-    printf("\n\nGiven e-mail input : %s",argv[1]);
+    if(input == NULL) {
+        return EXIT_FAILURE;
+    }
 
-    for(int i = 0; argv[1][i] != NULL ; i++)
+    printf("\n\nGiven e-mail input : %s",input);
+
+    //cheking the first variable
+
+    if(input[0] == '@')
+    {
+        printf("\nNOT VALID!\n");
+        return EXIT_FAILURE;
+    }
+    if(input[0] == '.')
+    {
+        printf("\nNOT VALID!\n");
+        return EXIT_FAILURE;
+    }
+
+    for(int i = 1; input[i] != '\0'; i++)
     {
 
-        //checking first variable
+        //checking middle variables.
 
-        if(i == 0)
+        if(input[i] == '@')
         {
-            if(argv[1][i] == '@')
+            if(input[i+1] == '@')
             {
                 printf("\nNOT VALID!\n");
                 return EXIT_FAILURE;
             }
-            if(argv[1][i] == '.')
+            if(input[i+1] == '.')
             {
                 printf("\nNOT VALID!\n");
                 return EXIT_FAILURE;
             }
         }
 
-        //checking other variables
-
-        if(argv[1][i] == '@')
+        if(input[i] == '.')
         {
-            if(argv[1][i+1] == '@')
+            if(input[i+1] == '@')
             {
                 printf("\nNOT VALID!\n");
                 return EXIT_FAILURE;
             }
-            if(argv[1][i+1] == '.')
+            if(input[i+1] == '.')
             {
                 printf("\nNOT VALID!\n");
                 return EXIT_FAILURE;
@@ -44,13 +59,13 @@ int emailval(int argc, char *argv[]){
 
         //checking last variable.
 
-        if(argv[1][i+1] == NULL)
+        if(input[i+1] == '\0')
         {
-            if(argv[1][i] == '@'){
+            if(input[i] == '@'){
                 printf("\nNOT VALID!\n");
                 return EXIT_FAILURE;
             }
-            if(argv[1][i] == '.'){
+            if(input[i] == '.'){
                 printf("\nNOT VALID!\n");
                 return EXIT_FAILURE;
             }
