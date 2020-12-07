@@ -10,7 +10,6 @@ int main(int argc, char *argv[])
         usage();
         return EXIT_FAILURE;
     }
-
-    emailval(argv[1]);
+    valcheck(emailval(argv[1]));
     return 0;
 }
