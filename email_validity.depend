@@ -23,14 +23,14 @@
 	<stdlib.h>
 	"email.h"
 
-1607337528 source:/home/kaan/Projects/email_validator/main.c
+1607418325 source:/home/kaan/Projects/email_validator/main.c
 	<stdio.h>
 	<stdlib.h>
 	"email.h"
 
 1607337425 /home/kaan/Projects/email_validator/email.h
 
-1607338728 source:/home/kaan/Projects/email_validator/email.c
+1607418890 source:/home/kaan/Projects/email_validator/email.c
 	<stdio.h>
 	<stdlib.h>
 	"email.h"

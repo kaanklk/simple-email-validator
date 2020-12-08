@@ -5,59 +5,34 @@
 
 int emailval(char *input){
 
-    if(input == NULL) {
+    if(input == NULL || *input == '\0' ) {
         return EXIT_FAILURE;
     }
 
     printf("\n\nGiven e-mail input : %s",input);
 
-    //cheking the first character
 
-    if(input[0] == '@')
+    for(int i = 0; input[i] != '\0'; i++)
     {
-        return -1;
-    }
-    if(input[0] == '.')
-    {
-        return -1;
-    }
-
-    //checking middle characters.
-
-    for(int i = 1; input[i] != '\0'; i++)
-    {
-        if(input[i] == '@')
+        // checking the first character
+        if(input[0] == '@' || input[0] == '.')
         {
-            if(input[i+1] == '@')
-            {
-                return -2;
-            }
-            if(input[i+1] == '.')
+            return -1;
+        }
+
+        //checking the middle characters
+        if(input[i] == '@' || input[i] == '.')
+        {
+            if(input[i+1] == '@' || input[i+1] == '.')
             {
                 return -2;
             }
         }
 
-        if(input[i] == '.')
-        {
-            if(input[i+1] == '@')
-            {
-                return -2;
-            }
-            if(input[i+1] == '.')
-            {
-                return -2;
-            }
-        }
-
-        //the last character.
-
+        //checking the last character.
         if(input[i+1] == '\0')
         {
-            if(input[i] == '@'){
-                return -3;
-            }
-            if(input[i] == '.'){
+            if(input[i] == '@' || input[i] == '.'){
                 return -3;
             }
         }
@@ -88,4 +63,6 @@ int valcheck(int val){
         printf("\nCheck the last character!");
         return EXIT_FAILURE;
     }
+    printf("\nSomething went wrong!");
+    return EXIT_FAILURE;
 }
